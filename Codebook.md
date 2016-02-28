@@ -57,7 +57,3 @@ tidyDT   = dcast(melted_data, Subject + activity_labels ~ variable, mean)
 
 write.table(tidyDT, file = "./tidy_data.txt")
 
-## Produce Codebook
-library(knitr)
-knit("makeCodebook.Rmd", output = "codebook.md", encoding = "ISO8859-1", quiet = TRUE)
-markdownToHTML("codebook.md", "codebook.html")
